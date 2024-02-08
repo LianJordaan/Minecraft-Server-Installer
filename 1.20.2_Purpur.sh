@@ -4,8 +4,7 @@
 echo "Enter a folder name to store the server files:"
 read folder_name
 
-# Save the folder name to a file
-echo "$folder_name" > ~/.foldername
+mkdir -p "$folder_name"
 
 # Check if the server.jar file exists
 if [ ! -f "$folder_name/server.jar" ]; then
