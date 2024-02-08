@@ -14,10 +14,7 @@ if [ ! -f "$folder_name/server.jar" ]; then
 fi
 touch "$folder_name/eula.txt"
 # Check if the eula.txt file exists
-if [ ! -f "$folder_name/eula.txt" ]; then
-    # Create eula.txt and agree to the EULA
-    echo "eula=true" > "$folder_name/eula.txt"
-fi
+echo "eula=true" > "$folder_name/eula.txt"
 
 # Start the server
 echo "Starting the server..."
