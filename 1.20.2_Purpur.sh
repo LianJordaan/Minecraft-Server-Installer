@@ -16,7 +16,12 @@ touch "$folder_name/eula.txt"
 # Check if the eula.txt file exists
 echo "eula=true" > "$folder_name/eula.txt"
 
+touch "$folder_name/start.sh"
+# Check if the start.sh file exists
+echo "java -Xms1G -Xmx4G -jar server.jar nogui" > "$folder_name/start.sh"
+
 # Start the server
 echo "Starting the server..."
 cd "$folder_name"
-java -Xms1G -Xmx4G -jar server.jar nogui
+
+sh start.sh
